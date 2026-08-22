@@ -60,7 +60,7 @@ Visual inspection showed plates were still partially legible after Gaussian blur
 ├── notebooks/
 │   └── License_Plate_Detection_Blurring_MH_vastai.ipynb  # end-to-end training/eval notebook
 ├── weights/
-│   └── best.pt                                           # trained YOLOv8m weights (if included — see Setup)
+│   └── best.pt                                           # trained YOLOv8m weights
 └── sample_images/
     ├── before/                                            # a few example input images
     └── after/                                              # matching blurred outputs
@@ -82,20 +82,20 @@ pip install -r requirements.txt
 
 ## Usage
 
-Once you have trained weights (`best.pt`), `detect_and_blur.py` runs the detect-and-blur pipeline directly from the command line — on a single image, a folder of images, or a video — without needing to open the notebook.
+`detect_and_blur.py` runs the detect-and-blur pipeline directly from the command line — on a single image, a folder of images, or a video — without needing to open the notebook.
 
 ```bash
 # Single image
-python detect_and_blur.py --weights best.pt --input car.jpg --output out.jpg
+python detect_and_blur.py --weights ./weights/best.pt --input car.jpg --output out.jpg
 
 # Directory of images
-python detect_and_blur.py --weights best.pt --input ./sample_images/before --output ./sample_images/after
+python detect_and_blur.py --weights ./weights/best.pt --input ./sample_images/before --output ./sample_images/after
 
 # Video
-python detect_and_blur.py --weights best.pt --input drive.mp4 --output drive_blurred.mp4
+python detect_and_blur.py --weights ./weights/best.pt --input drive.mp4 --output drive_blurred.mp4
 
 # Gaussian blur instead of the default box blur, plus a readability report
-python detect_and_blur.py --weights best.pt --input car.jpg --output out.jpg \
+python detect_and_blur.py --weights ./weights/best.pt --input car.jpg --output out.jpg \
     --blur-type gaussian --report
 ```
 
@@ -116,7 +116,7 @@ python detect_and_blur.py --weights best.pt --input car.jpg --output out.jpg \
 
 ## Dataset
 
-The training set used here is a large (~27k image) license-plate detection dataset in YOLO annotation format. **The full dataset is not redistributed in this repository for licensing reasons.** A small sample of images is included under `sample_images/` for demonstration — see [Usage](#usage) below to try the pipeline on your own images.
+The training set used here is a large (~27k image) license-plate detection dataset in YOLO annotation format. **The full dataset is not redistributed in this repository for licensing reasons.** A small sample of images is included under `sample_images/` for demonstration — see [Usage](#usage) above to try the pipeline on your own images.
 
 ## Future improvements
 
