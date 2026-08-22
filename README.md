@@ -71,7 +71,7 @@ Visual inspection showed plates were still partially legible after Gaussian blur
 This notebook was run on a rented GPU instance (vast.ai) rather than locally or on Colab.
 
 ```bash
-pip install torch torchvision ultralytics opencv-python matplotlib pillow requests pandas seaborn
+pip install -r requirements.txt
 ```
 
 1. Provision a GPU instance (e.g. via vast.ai) with CUDA available.
