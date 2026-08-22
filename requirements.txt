@@ -1,0 +1,11 @@
+
+torch==2.11.0
+torchvision
+ultralytics==8.4.55
+matplotlib==3.10.0
+numpy==2.4.0
+opencv-python
+pillow
+requests
+pandas
+seaborn
