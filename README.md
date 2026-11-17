@@ -116,7 +116,7 @@ python detect_and_blur.py --weights ./weights/best.pt --input car.jpg --output o
 
 ## Dataset
 
-The training set used here is a large (~27k image) license-plate detection dataset in YOLO annotation format from [Kaggle] (https://www.kaggle.com/datasets/fareselmenshawii/large-license-plate-dataset/). A small sample of images is included under `sample_images/` for demonstration — see [Usage](#usage) above to try the pipeline on your own images.
+The training set used here is a large (~27k image) license-plate detection dataset in YOLO annotation format from [Kaggle](https://www.kaggle.com/datasets/fareselmenshawii/large-license-plate-dataset/). A small sample of images is included under `sample_images/` for demonstration — see [Usage](#usage) above to try the pipeline on your own images.
 
 ## Future improvements
 
